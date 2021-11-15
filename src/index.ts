@@ -1,10 +1,11 @@
-import express, { Application, Request, Response } from "express"
+import express, { Application, Request, Response } from "express";
+import config from "./config/config";
 
 const app: Application = express();
-const port = 3000;
+const port = config.app.port;
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
+	res.send('Hello World!')
 })
 
 app.listen(port, async () => {

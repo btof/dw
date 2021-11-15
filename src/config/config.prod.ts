@@ -1,4 +1,4 @@
-import { ConfigType } from "./config.type";
+import { ConfigType } from "./config";
 
 const prodConfig: ConfigType = {
 	app: {

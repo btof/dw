@@ -8,6 +8,5 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.listen(port, async () => {
-  getConfig();
   console.log(`Example app listening at http://localhost:${port}`)
 })

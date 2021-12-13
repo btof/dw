@@ -1,6 +1,6 @@
 import { Schema, Document } from 'mongoose';
 
-export interface BaseEntity extends Document{
+export interface BaseEntity extends Document {
   basicType: string;
   lpdSequence: number;
   lastModified: Date;
@@ -12,6 +12,6 @@ export const baseEntitySchema = new Schema<BaseEntity>({
   basicType: { type: String, required: true },
   lpdSequence: { type: Number, required: true },
   lastModified: { type: Date, required: true },
-  isDeleted: String,
+  isDeleted: { type: String, required: false },
   mark: { type: String, required: true }
 });

@@ -15,5 +15,5 @@ export const baseLapidEntitySchema = new Schema<BaseLapidEntity>({
   collectionName: { type: String, required: true },
   name: { type: String, required: true },
   color: { type: String, required: true },
-  remark: String
+  remark: { type: String, required: false }
 });

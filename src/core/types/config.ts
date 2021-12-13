@@ -1,9 +1,9 @@
-export type EntityConfig = {
+export type BTEntity = {
   collectionType: CollectionType;
-  basicType: BasicType;
+  basicType: BTBasicType;
 };
 
-export type BasicType =
+export type BTBasicType =
   | 'BlueTorchArea'
   | 'BlueTorchCircle'
   | 'BlueTorchFplRoute'
@@ -26,5 +26,5 @@ export type CollectionType =
   | 'systems';
 
 export type RoutesConfigType = {
-  [key in CollectionType]: EntityConfig;
+  [key in CollectionType]: BTEntity;
 };

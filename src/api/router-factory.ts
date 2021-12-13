@@ -1,8 +1,8 @@
 import express from 'express';
 import { forceCreate, create, remove, update } from '../actions';
-import { EntityConfig } from '../core/types/config';
+import { BTEntity } from '../core/types/config';
 
-export default (data: EntityConfig) => {
+export default (data: BTEntity) => {
   const router = express.Router();
 
   router.get('/', (req, res) => {

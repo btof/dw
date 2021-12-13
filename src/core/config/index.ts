@@ -12,8 +12,8 @@ export type ConfigType = {
     host: string;
     port: number;
   };
-  db?: {
-    host: string;
+  db: {
+    connectionString: string;
   };
 };
 

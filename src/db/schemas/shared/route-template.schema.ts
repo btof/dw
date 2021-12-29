@@ -2,13 +2,13 @@ import { Schema } from 'mongoose';
 import { BaseEntity, baseEntitySchema } from './base-entity.schema';
 import { RoutePoint, routePointSchema } from './route-point.schema';
 
-export interface Route extends BaseEntity {
+export interface RouteTemplate extends BaseEntity {
   name: string;
   points: RoutePoint[];
   lastFetchDate: Date;
 }
 
-export const routeSchema = new Schema<Route>({
+export const routeTemplateSchema = new Schema<RouteTemplate>({
   name: { type: String, required: true, unique: true },
   points: [...routePointSchema.obj],
   lastFetchDate: { type: Date, required: true },
